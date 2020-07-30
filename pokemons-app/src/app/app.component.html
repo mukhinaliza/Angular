@@ -1,0 +1,23 @@
+<nav>
+  <a routerLink="/dashboard">Покемоны</a>
+  <a routerLink="/pokemons">Список</a>
+</nav>
+<div>
+  <div>
+    <div>
+      <label for="search-text">Поиск</label>
+      <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+        [(ngModel)]="searchText" placeholder="Enter text to search" 
+        autofocus>
+    </div>
+    <ul>
+      <li *ngFor="let pokemon of pokemons | appFilter: searchText">
+        {{pokemon}}
+      </li>
+    </ul>
+  </div>
+</div>
+<router-outlet></router-outlet>
+<app-pokemon-detail [pokemons]=this.pokemons [searchText]='this.searchText'></app-pokemon-detail>
+
+

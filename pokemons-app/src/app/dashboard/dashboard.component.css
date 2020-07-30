@@ -1,0 +1,18 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 3rem;
+  }
+  .card {
+    width: 50%;
+    height: 100%;
+    margin: 1px;
+    text-align: center;
+  }
+  .imgSize {
+    width: 150px;
+  }
+  .buttonMrg {
+    margin: 10px;
+  }
+  

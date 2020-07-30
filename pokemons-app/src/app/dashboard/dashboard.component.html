@@ -1,0 +1,15 @@
+<div>
+  <div *ngFor="let pokemon of pokemons">
+    <div>
+    <div class="container">
+  <div class="card"  [ngStyle]="{border: pokemon.damage > 50 ? '2px solid red' : '2px solid black'}" >
+    <img  routerLink="/detail/{{pokemon.id}}" class="imgSize" src="{{pokemon.img}}" alt="{{pokemon.name}}"/>
+    <p> {{pokemon.name}} </p>
+      <p> {{pokemon.damage}} </p>
+      <hr>
+      <button class="buttonMrg" (click)="catchPokemon($event, pokemon.name)">Поймать</button>
+  </div>
+  </div> 
+    </div>
+  </div>
+</div>
