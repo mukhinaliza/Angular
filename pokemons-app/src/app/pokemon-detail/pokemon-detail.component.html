@@ -1,0 +1,14 @@
+<div *ngIf="pokemon">
+  <h3>{{pokemon.name | uppercase}} Details</h3>
+  <div><img  routerLink="/detail/{{pokemon.id}}" class="imgSize" src="{{pokemon.img}}" alt="{{pokemon.name}}"/></div>
+  <div>
+    <label>Редактировать:
+      <input [(ngModel)]="pokemon.name" placeholder="name"/>
+      <input [(ngModel)]="pokemon.damage" placeholder="damage"/>
+      <input [(ngModel)]="pokemon.birthDay" placeholder="birthDay"/>
+    </label>
+  </div>
+  <button (click)="goBack()">Назад</button>
+  <button (click)="goBack()">Сохранить</button>
+  <button class="buttonMrg" (click)="catchPokemon($event, pokemon.name)">Поймать</button>
+</div>
